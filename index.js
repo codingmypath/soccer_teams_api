@@ -22,18 +22,12 @@ const teams = {
         'stadium': 'Citigroup, Inc.',
         'image': 'https://i.ibb.co/pvX7pSR/Colorado-Rapids-logo.png',
     },
-    'CAT': {
-        'name': 'Caterpillar, Inc.',
-        'dividend': 5.20,
-        'pay': 'quarterly',
-        'sector': 'Industrials',
+    'Liverpool': {
+        'stadium': 'Anfield',
         'image': 'https://i.ibb.co/3YbCQJw/Caterpillar-Logo.png',
     },
-    'CSCO': {
-        'name': 'Cisco Systems',
-        'dividend': 1.56,
-        'pay': 'quarterly',
-        'sector': 'Technology',
+    'Manchester City': {
+        'stadium': 'idk...',
         'image': 'https://i.ibb.co/ZBnmdXc/cisco-logo-transparent.png',
     },
     'D': {
