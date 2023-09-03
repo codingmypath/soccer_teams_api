@@ -6,112 +6,175 @@ const cors = require('cors');
 app.use(cors());
 
 const teams = {
+    'atlanta united': {
+        'stadium': '	Mercedes-Benz-Stadium',
+        'image': 'https://i.ibb.co/JvnhqzS/Atlanta-MLS.png',
+    },
     'austin fc': {
-        'stadium': 'idk',
+        'stadium': 'Q2Stadium',
         'image': 'https://i.ibb.co/XfH4fjq/Austin-FC-logo.png',
     },
     'charlotte fc': {
         'stadium': 'idk',
         'image': 'https://i.ibb.co/ygFzd8p/Charlotte-FC-logo.png',
     },
+    'fc cincinnati': {
+        'stadium': 'TQL Stadium',
+        'image': 'https://i.ibb.co/V9g1xwN/FC-Cincinnati-primary-logo.png',
+    },
     'chicago fire ': {
-        'stadium': 'idk',
+        'stadium': 'Soldier Field',
         'image': 'https://i.ibb.co/pf720Tj/Chicago-Fire-logo.png',
     },
     'colorado rapids': {
-        'stadium': 'Citigroup, Inc.',
+        'stadium': '',
         'image': 'https://i.ibb.co/pvX7pSR/Colorado-Rapids-logo.png',
     },
-    'Liverpool': {
-        'stadium': 'Anfield',
-        'image': 'https://i.ibb.co/3YbCQJw/Caterpillar-Logo.png',
+    'columbus crew': {
+        'stadium': 'Mapfre Stadium',
+        'image': 'https://i.ibb.co/xghKC3R/Columbus-Crew-logo-2021.png',
     },
-    'Manchester City': {
-        'stadium': 'idk...',
-        'image': 'https://i.ibb.co/ZBnmdXc/cisco-logo-transparent.png',
+    'dc united': {
+        'stadium': '',
+        'image': 'https://i.ibb.co/Qbw04xW/D-C-United-logo-2016.png',
     },
-    'D': {
-        'name': 'Dominion Energy, Inc',
-        'dividend': 2.67,
-        'pay': 'quarterly',
-        'sector': 'Utilities',
-        'image': 'https://i.ibb.co/R3WHxmS/dominion.png',
+    'fc dallas': {
+        'stadium': 'Toyota Stadium',
+        'image': 'https://i.ibb.co/pXs8gsj/FC-Dallas-logo.png',
     },
-    'F': {
-        'name': 'Ford Motor Company',
-        'dividend': 0.60,
-        'pay': 'quarterly',
-        'sector': 'Consumer Cyclical',
-        'image': 'https://i.ibb.co/T4KtsjY/Ford-Logo.png',
+    'houston dynamo fc': {
+        'stadium': '',
+        'image': 'https://i.ibb.co/dbJDtmg/Houston-Dynamo-FC-logo.png',
     },
-    'JNJ': {
-        'name': 'Johnson & Johnson',
-        'dividend': 4.76,
-        'pay': 'quarterly',
-        'sector': 'Healthcare',
-        'image': 'https://i.ibb.co/DDfBLRJ/Johnson-and-Johnson-logo.png',
+    'sporting kansas city': {
+        'stadium': '',
+        'image': 'https://i.ibb.co/TTYrJrz/skc.png',
     },
-    'KHC': {
-        'name': 'The Kraft Heinz Compay',
-        'dividend': 1.60,
-        'pay': 'quarterly',
-        'sector': 'Consumer Defensive',
-        'image': 'https://i.ibb.co/N2624kw/kraft-foods-logo.jpg',
+    'la galaxy': {
+        'stadium': '',
+        'image': 'https://i.ibb.co/0yfHJBF/Los-Angeles-Galaxy-logo.png',
     },
-    'KO': {
-        'name': 'Coca-Cola Company',
-        'dividend': 1.84,
-        'pay': 'quarterly',
-        'sector': 'Consumer Defensive',
+    'lafc': {
+        'stadium': '',
+        'image': 'https://i.ibb.co/sHPVT6N/Los-Angeles-Football-Club.png',
+    },
+    'inter miami cf': {
+        'stadium': '',
+        'image': 'https://i.ibb.co/cyG47m6/Inter-Miami-CF-logo.png',
+    },
+    'minnesota united': {
+        'stadium': '',
+        'image': 'https://i.ibb.co/zHQXZVr/Minnesota-United-FC-MLS-Primary-logo.png',
+    },
+    'cf montreal': {
+        'stadium': '',
+        'image': 'https://i.ibb.co/wC2MHSn/CF-Montreal-logo-2023.png',
+    },
+    'nashville sc': {
+        'stadium': '',
+        'image': 'https://i.ibb.co/s35H68J/Nashville-SC-logo-2020.png',
+    },
+    'new england revolution': {
+        'stadium': '',
+        'image': 'https://i.ibb.co/FV7rZP4/New-England-Revolution-2021-logo.png',
+    },
+    'new york red bulls': {
+        'stadium': '',
+        'image': 'https://i.ibb.co/Fh1VYHh/New-York-Red-Bulls-logo.png',
+    },
+    'new york city football club': {
+        'stadium': '',
+        'image': 'https://i.ibb.co/0njvQWx/New-York-City-FC.png',
+    },
+    'orlando city': {
+        'stadium': '',
+        'image': 'https://i.ibb.co/vzQhq3m/Orlando-City-2014.png',
+    },
+    'philadelphia union': {
+        'stadium': '',
+        'image': 'https://i.ibb.co/ssBKZF0/Philadelphia-Union-2018-logo.png',
+    },
+    'portland timbers': {
+        'stadium': '',
+        'image': 'https://i.ibb.co/tct39fB/Portland-Timbers-logo.png',
+    },
+    'real salt lake': {
+        'stadium': '',
+        'image': 'https://i.ibb.co/3BzJ2yc/Real-Salt-Lake-2010.png',
+    },
+    'san jose earthquakes': {
+        'stadium': '',
+        'image': 'https://i.ibb.co/vV6dVjh/San-Jose-Earthquakes-2014.png',
+    },
+    'seattle sounders fc': {
+        'stadium': '',
+        'image': 'https://i.ibb.co/pZmfBkQ/Seattle-Sounders-FC.png',
+    },
+    'st. louis city sc': {
+        'stadium': '',
+        'image': 'https://i.ibb.co/7Jv44GZ/St-Louis-City-SC-logo.png',
+    },
+    'toronto fc': {
+        'stadium': '',
+        'image': 'https://i.ibb.co/8BR0ySj/Toronto-FC-Logo.png',
+    },
+    'vancouver whitecaps fc': {
+        'stadium': '',
         'image': '',
     },
-    'O': {
-        'name': 'Realty Income Corporation',
-        'dividend': 3.066,
-        'pay': 'Monthly',
-        'sector': 'Real Estate',
-        'image': 'https://i.ibb.co/ZHTzZ24/realty-income-corporation-logo-vector.png',
-
+    'arsenal': {
+        'stadium': '',
+        'image': '',
     },
-    'PEP': {
-        'name': 'PepsiCo',
-        'dividend': 5.06,
-        'pay': 'quarterly',
-        'sector': 'Consumer Defensive',
-        'image': 'https://i.ibb.co/mBj7Rgt/Pepsi-logo-2014-svg.png',
+    'brighton': {
+        'stadium': '',
+        'image': '',
     },
-    'SBUX': {
-        'name': 'Starbucks Corporation',
-        'dividend': 2.12,
-        'pay': 'quarterly',
-        'sector': 'Consumer Cyclical',
-        'image': 'https://i.ibb.co/7gSRQjt/Starbucks-Corporation-Logo-2011-svg.png',
+    'chelsea': {
+        'stadium': '',
+        'image': '',
     },
-    'SPG': {
-        'name': 'Simon Property Group',
-        'dividend': 7.40,
-        'pay': 'quarterly',
-        'sector': 'Real Estate',
-        'image': 'https://i.ibb.co/Fb8nsq7/Simon-Property-Group.jpg',
+    'liverpool': {
+        'stadium': 'Anfield',
+        'image': '',
     },
-    'TGT': {
-        'name': 'Target Corporation',
-        'dividend': 4.40,
-        'pay': 'quarterly',
-        'sector': 'Consumer Defensive',
-        'image': 'https://i.ibb.co/z2D7p4s/Target-logo-1.png',
+    'manchester city': {
+        'stadium': 'idk...',
+        'image': '',
     },
-    'WMT': {
-        'name': 'Walmart Inc.',
-        'dividend': 2.28,
-        'pay': 'quarterly',
-        'sector': 'Consumer Defensive',
-        'image': 'https://i.ibb.co/DRJHGMc/cdn-corporate-walmart.png',
-    }
+    'manchester united': {
+        'stadium': '',
+        'image': '',
+    },
+    'newcastle': {
+        'stadium': '',
+        'image': '',
+    },
+    'tottenham hotspur': {
+        'stadium': '',
+        'image': '',
+    },
+    'west ham united': {
+        'stadium': '',
+        'image': '',
+    },
+    'atletico madrid': {
+        'stadium': '',
+        'image': '',
+    },
+    'barcelona': {
+        'stadium': '',
+        'image': '',
+    },
+    'real madrid': {
+        'stadium': '',
+        'image': '',
+    },
+    
 }
 
 app.get('/api/:teamName', (req, res) => {
-    const ticker = req.params.teamName;
+    const ticker = req.params.teamName.toLowerCase();
     if (teams[ticker]) {
         res.json(teams[ticker])
     }
